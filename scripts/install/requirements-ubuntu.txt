@@ -20,9 +20,9 @@ libfftw3-dev
 libfreetype6-dev
 libgmp-dev
 libjpeg-dev
-liblcms
-liblcms-dev
-liblcms-utils
+liblcms2-2
+liblcms2-dev
+liblcms2-utils
 libmemcached-dev
 libmpfr-dev
 libopenexr-dev
@@ -39,7 +39,7 @@ nodejs
 npm
 ntp
 openssl
-premake
+premake4
 python
 python-dev
 python-pip

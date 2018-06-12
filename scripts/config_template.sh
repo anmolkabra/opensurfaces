@@ -81,7 +81,7 @@ PSQL_DUMP_URL=http://labelmaterial.s3.amazonaws.com/release/pg_dump-0.sql.gz
 
 # PostgreSQL version.  Note that your database/cluster is tied to this version
 # number, so don't change it unless you understand what's going on.
-PSQL_VERSION=9.1
+PSQL_VERSION=9.5
 
 # PostgreSQL cluster, database, and user name -- do not change.
 # This is the old name of the project; it would break too much to change it to
