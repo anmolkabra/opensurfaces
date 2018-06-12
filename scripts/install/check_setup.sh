@@ -42,7 +42,7 @@ cd "$REPO_DIR"
 
 # fix permissions (just in case repo was checked out as root)
 echo "Fixing $REPO_DIR owner..."
-sudo chown -R $USER:$USER $REPO_DIR
+sudo chown -R $USER:pug-$USER $REPO_DIR
 echo "Fixing $REPO_DIR permissions"
 # note: not recursive
 sudo chmod 755 $REPO_DIR
