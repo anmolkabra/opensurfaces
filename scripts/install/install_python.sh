@@ -21,8 +21,7 @@ echo "Upgrading versiontools..."
 $GLOBAL_PIP install --index-url=https://pypi.python.org/simple/ --upgrade versiontools
 
 echo "Upgrading virtualenv..."
-# using conda instead of pip
-conda install virtualenv
+$GLOBAL_PIP install --index-url=https://pypi.python.org/simple/ --upgrade virtualenv
 
 if [[ ! -d "$VENV_DIR" ]]; then
 	echo "Create virtualenv (with python2.7)..."

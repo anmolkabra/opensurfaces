@@ -6,10 +6,8 @@ git-core
 goaccess
 inotify-tools
 ipython
-ipython-notebook
 jhead
 libatlas-base-dev
-libatlas-dev
 libblas-dev
 libboost-dev
 libboost-filesystem-dev
