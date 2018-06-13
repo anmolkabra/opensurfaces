@@ -89,6 +89,10 @@ sudo sed -r "s/^shared_buffers\s+=.*/shared_buffers = $PSQL_SHARED_BUFFERS/" $PO
 sudo mv -f tmp.conf $POSTGRESQL_CONF
 sudo grep shared_buffers $POSTGRESQL_CONF
 
+# make postgres owner of conf file
+echo "Giving ownership of $POSTGRESQL_CONF to postgres user"
+sudo chown postgres:postgres $POSTGRESQL_CONF
+
 # restart postgres with updated shared_buffers
 if sudo service postgresql restart; then
 	echo "success"
