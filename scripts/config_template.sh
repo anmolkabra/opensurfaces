@@ -59,8 +59,8 @@ REPO_DIR="$(readlink -f "$( builtin cd "$( dirname "$( readlink -f "${BASH_SOURC
 # Django source files.  Don't change this.
 SRC_DIR=$REPO_DIR/server
 
-# Virtualenv directory.  Don't change this.
-VENV_DIR=$REPO_DIR/venv
+# Conda virtual env name.  Don't change this.
+CONDA_ENV_NAME=$PROJECT_NAME-env
 
 # Location where local data is stored: (does not have to be inside the repository)
 #   $DATA_DIR/static: static assets such as js, css, and copies of the paper.
