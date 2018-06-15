@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtexpire '<regex>'
+.. describe:: ./manage mtexpire '<regex>'
 
     Expire all experiments whose ``slug`` matches a regex.  When a HIT is expired,
     any current workers may finish, but no new workers may start the HIT.
@@ -26,7 +26,7 @@ class Command(BaseCommand):
             else:
                 print 'Expiring: %s' % experiments.values_list('slug', flat=True)
         else:
-            print "Usage: ./manage.py mtexpire '<regex>'"
+            print "Usage: ./manage mtexpire '<regex>'"
             return
 
         print 'MTURK HOST:', settings.MTURK_HOST

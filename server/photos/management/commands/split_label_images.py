@@ -16,7 +16,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         if len(args) < 2:
-            print 'Usage: ./manage.py split_label_images [test-fraction] [valid-fraction]'
+            print 'Usage: ./manage split_label_images [test-fraction] [valid-fraction]'
             return
 
         test_frac = float(args[0])

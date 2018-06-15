@@ -9,7 +9,7 @@ from intrinsic.models import IntrinsicPoint, IntrinsicPointOpacityResponse, \
 
 def configure_experiments():
     """ This function is automatically called by
-    the command ./manage.py mtconfigure """
+    the command ./manage mtconfigure """
 
     from mturk.utils import configure_experiment
     production = not settings.MTURK_SANDBOX

@@ -30,7 +30,7 @@ echo "===================================================================="
 echo "Now creating a superuser.  Use this account to log into the website."
 builtin cd "$SRC_DIR"
 set +e
-./manage.py createsuperuser
+./manage createsuperuser
 set -e
 
 # build sphinx documentation in docs/

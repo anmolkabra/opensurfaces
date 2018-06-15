@@ -15,7 +15,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         if len(args) < 1:
-            print 'Usage: ./manage.py intrinsic_download_photos <outdir>'
+            print 'Usage: ./manage intrinsic_download_photos <outdir>'
             return
 
         outdir = args[0]

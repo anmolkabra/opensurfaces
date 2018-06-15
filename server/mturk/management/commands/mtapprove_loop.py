@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtapprove_loop '<regex>'
+.. describe:: ./manage mtapprove_loop '<regex>'
 
     Instantly approve all submissions, the moment they arrive.  In a loop, this
     script finds all experiments whose ``slug`` matches the given regex and
@@ -26,7 +26,7 @@ class Command(BaseCommand):
         if len(args) == 1:
             regex = args[0]
         else:
-            print "Usage: ./manage.py mtapprove_loop '<regex>'"
+            print "Usage: ./manage mtapprove_loop '<regex>'"
             return
 
         # it takes a little while for MTurk to let you approve an assignment

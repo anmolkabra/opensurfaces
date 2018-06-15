@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Fixes permissions for the project.  You may need to run this if you ran
-# "./manage.py runserver" as the current user instead of $SERVER_USER.
+# "./manage runserver" as the current user instead of $SERVER_USER.
 #
 
 DIR="$( builtin cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

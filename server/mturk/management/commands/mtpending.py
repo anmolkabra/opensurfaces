@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtpending
+.. describe:: ./manage mtpending
 
     Search for any objects not described by an instance of
     :class:`mturk.models.PendingContent` and create ``PendingContent``

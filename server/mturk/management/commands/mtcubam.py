@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtcubam
+.. describe:: ./manage mtcubam
 
     Update all labels for the experiments that use CUBAM to aggregate binary
     answers.  Since CUBAM is expensive and can take hours to run if you have
@@ -7,7 +7,7 @@
 
     To force a re-run, mark the corresponding :class:`mturk.models.Experiment`
     instance to be dirty by running the following in a Python shell (you can
-    start one with ``./manage.py shell_plus``):
+    start one with ``./manage shell_plus``):
 
     .. code-block:: py
 

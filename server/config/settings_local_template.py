@@ -30,7 +30,7 @@ CACHE_MIDDLEWARE_ENABLE = ENABLE_CACHING
 CACHE_MIDDLEWARE_SECONDS = 300
 
 # If True, cache js/css offline.  Note that you will need to run
-#  ./manage.py compress
+#  ./manage compress
 # after every js/css/template change if enabled.
 COMPRESS_OFFLINE = False
 

@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtsync
+.. describe:: ./manage mtsync
 
     Synchronize our local information about HITs and assignments with the
     Amazon database.

@@ -11,4 +11,4 @@ source $DIR/load_config.sh
 builtin cd $SRC_DIR
 
 # "shell_plus" is an addon that auto-loads all of our models
-sudo -u $SERVER_USER ./manage.py shell_plus
+sudo -u $SERVER_USER ./manage shell_plus

@@ -6,7 +6,7 @@ from normals.models import ShapeRectifiedNormalLabel, ShapeRectifiedNormalQualit
 
 def configure_experiments():
     """ This function is automatically called by
-    the command ./manage.py mtconfigure """
+    the command ./manage mtconfigure """
 
     # must be imported locally to avoid a circular import
     from mturk.utils import configure_experiment

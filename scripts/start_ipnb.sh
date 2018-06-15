@@ -8,4 +8,4 @@ DIR="$( builtin cd "$( dirname "$( readlink -f "${BASH_SOURCE[0]}" )" )" && pwd 
 source $DIR/load_config.sh
 
 builtin cd $SRC_DIR
-sudo -u $SERVER_USER bash -c "export PYTHONPATH=$SRC_DIR:$PYTHONPATH; ./manage.py shell_plus --notebook"
+sudo -u $SERVER_USER bash -c "export PYTHONPATH=$SRC_DIR:$PYTHONPATH; ./manage shell_plus --notebook"

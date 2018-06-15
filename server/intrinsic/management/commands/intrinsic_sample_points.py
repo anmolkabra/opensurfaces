@@ -41,7 +41,7 @@ class Command(BaseCommand):
             kwargs['avoid_existing_points'] = False
             kwargs['chromaticity_thresh'] = None
         else:
-            print 'Usage: ./manage.py intrinsic_sample_points (sparse|dense)'
+            print 'Usage: ./manage intrinsic_sample_points (sparse|dense)'
             return
 
         photo_ids = []

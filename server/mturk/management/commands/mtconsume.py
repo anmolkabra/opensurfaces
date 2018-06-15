@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtconsume
+.. describe:: ./manage mtconsume
 
     Dispatch all pending content to the marketplace and create new HITs.
 

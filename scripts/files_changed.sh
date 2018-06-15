@@ -28,7 +28,7 @@ bash "$DIR/collect_static.sh"
 if grep -E '^\s*COMPRESS_OFFLINE\s*=\s*True' "$SRC_DIR/config/settings_local.py"; then
 	echo ""
 	echo "$0: update compressor offline files"
-	sudo -u $SERVER_USER bash -c "builtin cd $SRC_DIR; ./manage.py compress"
+	sudo -u $SERVER_USER bash -c "builtin cd $SRC_DIR; ./manage compress"
 fi
 
 # if a file is deleted but still referenced in Python code, we want to generate

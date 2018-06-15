@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtconfigure
+.. describe:: ./manage mtconfigure
 
     Takes the settings out of each ``<app>/experiments.py`` file and stores
     them in the database (in :class:`mturk.models.Experiment` instances).  It

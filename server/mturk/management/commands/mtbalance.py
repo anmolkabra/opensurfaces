@@ -1,5 +1,5 @@
 """
-.. describe:: ./manage.py mtbalance
+.. describe:: ./manage mtbalance
 
     Print the current account balance.
 
