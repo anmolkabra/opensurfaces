@@ -9,39 +9,23 @@ cd "$REPO_DIR"
 
 echo "Install Python packages..."
 
-# detect whether we need sudo for pip
-if [[ "$(which pip)" == "/usr/bin/pip" ]] || [[ "$(stat -c %U $(which pip))" == "root" ]]; then
-	GLOBAL_PIP="sudo pip"
-else
-	GLOBAL_PIP="pip"
-fi
-echo "GLOBAL_PIP=$GLOBAL_PIP"
+echo "Installing versiontools..."
+conda install -y -q -c dougal versiontools
 
-echo "Upgrading versiontools..."
-$GLOBAL_PIP install --index-url=https://pypi.python.org/simple/ --upgrade versiontools
-
-echo "Upgrading virtualenv..."
-# using conda instead of pip
-conda install virtualenv
-
-if [[ ! -d "$VENV_DIR" ]]; then
-	echo "Create virtualenv (with python2.7)..."
-	virtualenv --python=$(which python2.7) "$VENV_DIR"
+if ! conda env list | grep -q $CONDA_ENV_NAME; then
+	# conda env doesn't exist
+	echo "Create $CONDA_ENV_NAME (with python2.7)..."
+	conda create -y -q --no-default-packages -n $CONDA_ENV_NAME python=2.7
 fi
 
-echo "Activate virtualenv ($VENV_DIR)..."
-source "$VENV_DIR/bin/activate"
+echo "Activate conda env ($CONDA_ENV_NAME)..."
+source activate $CONDA_ENV_NAME
 
 ##########################################
-# Below here is local to the virtualenv
+# Below here is local to the conda env
 
 echo "Installing pip 1.5 locally..."
-mkdir -p opt/pip
-cd opt/pip
-wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
-python get-pip.py
-pip install 'pip>=1.5,<1.6'
-cd "$REPO_DIR"
+conda install -y -q -n $CONDA_ENV_NAME pip=1.5
 
 echo "Installing setup packages (locally)..."
 pip install --upgrade setuptools

@@ -147,7 +147,7 @@ if [[ -z "$KERNEL_SHMMAX" ]] || [[ -z "$KERNEL_SHMALL" ]]; then
 	exit 1
 fi
 
-if conda env list | grep -q "$PROJECT_NAME-env"; then
+if conda env list | grep -q $CONDA_ENV_NAME; then
 	source activate $CONDA_ENV_NAME
 else
 	echo "Note: conda env ($CONDA_ENV_NAME) not yet created"
