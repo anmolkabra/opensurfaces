@@ -51,7 +51,7 @@ nodejs -v
 
 npm config set registry http://registry.npmjs.org/
 echo "Install coffeescript"
-sudo npm install -g 'coffee-script@1.8.0'
+sudo npm install -g 'coffeescript@1.8.0'
 echo "Install less"
 sudo npm install -g 'less@1.7.5'
 
