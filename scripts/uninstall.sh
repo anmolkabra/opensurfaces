@@ -17,6 +17,8 @@ read -r -p "Are you sure? [y/N] " response
 response=${response,,}    # tolower
 if [[ $response =~ ^(y)$ ]]; then
 
+	source deactivate
+
 	# get sudo permission in advance
 	sudo -v
 
@@ -42,10 +44,9 @@ if [[ $response =~ ^(y)$ ]]; then
 	echo "Delete copies of static files..."
 	sudo rm -rf $DATA_DIR/static
 
-	echo "Delete opt and virtualenv..."
-	sudo rm -rf \
-		$REPO_DIR/opt \
-		$VENV_DIR
+	echo "Delete opt and conda env..."
+	sudo rm -rf $REPO_DIR/opt
+	conda-env remove $CONDA_ENV_NAME
 
 	echo "Drop postgres database cluster..."
 	sudo -u postgres pg_dropcluster --stop $PSQL_VERSION $DB_CLUSTER

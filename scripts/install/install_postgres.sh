@@ -198,7 +198,7 @@ bash "$DIR/migrate_database.sh"
 
 echo "Setting up database cache..."
 set +e
-$VENV_DIR/bin/python $SRC_DIR/manage.py createcachetable db-cache
+python $SRC_DIR/manage.py createcachetable db-cache
 set -e
 
 echo "$0: done"

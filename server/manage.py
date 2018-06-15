@@ -1,8 +1,3 @@
-#!../venv/bin/python2.7
-#
-# ^ Note the relative path.  You must call this the local directory as:
-#     ./manage.py [args...]
-
 import os
 import sys
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+exec "$HOME/anaconda2/envs/opensurfaces-env/bin/python" "$0.py" "$@"
+
+# workaround to use conda env python for manage.py no matter which user is 
+# sudoed to call this file 
+
+# would appreciate a way out of hardcoding the first command
