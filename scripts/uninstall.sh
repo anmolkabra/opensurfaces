@@ -46,7 +46,7 @@ if [[ $response =~ ^(y)$ ]]; then
 
 	echo "Delete opt and conda env..."
 	sudo rm -rf $REPO_DIR/opt
-	conda-env remove $CONDA_ENV_NAME
+	conda-env remove -n $CONDA_ENV_NAME
 
 	echo "Drop postgres database cluster..."
 	sudo -u postgres pg_dropcluster --stop $PSQL_VERSION $DB_CLUSTER
