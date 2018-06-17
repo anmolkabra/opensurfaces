@@ -3,7 +3,7 @@ distribute
 args
 setproctitle
 pyinotify
-ipython
+ipython<6.0
 pytz
 PIL
 
@@ -35,7 +35,7 @@ pyrabbit
 celery
 
 # django
-django
+django<1.10
 south
 gunicorn
 django-appconf

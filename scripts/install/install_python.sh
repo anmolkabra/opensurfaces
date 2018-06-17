@@ -34,12 +34,12 @@ source "$VENV_DIR/bin/activate"
 ##########################################
 # Below here is local to the virtualenv
 
-echo "Installing pip 1.5 locally..."
+echo "Installing pip locally..."
 mkdir -p opt/pip
 cd opt/pip
 wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
 python get-pip.py
-pip install 'pip>=1.5,<1.6'
+pip install --upgrade pip
 cd "$REPO_DIR"
 
 echo "Installing setup packages (locally)..."
@@ -84,6 +84,8 @@ git reset --hard 8e1b6b81dbc70f1bd752b4331f2010357b640ee9
 python setup.py install
 cd "$REPO_DIR"
 
+# some custom django libraries in opt/ use django.utils.importlib that is deprecated
+
 # install a custom patch of django-queued-storage from source (my own fork of
 # the main repo).
 echo ""
@@ -95,6 +97,7 @@ set -e
 cd opt/django-queued-storage
 git fetch --all
 git reset --hard origin/develop
+find . -type f -name "*.py" -print0 | xargs -0 sed -i 's/django\.utils\.importlib/importlib/g'
 pip install -e .
 cd "$REPO_DIR"
 
@@ -123,6 +126,7 @@ echo "Install imagekit from source"
 cd opt/django-imagekit
 git fetch --all
 git reset --hard 3.0a5
+find . -type f -name "*.py" -print0 | xargs -0 sed -i 's/django\.utils\.importlib/importlib/g'
 pip install -e .
 cd "$REPO_DIR"
 
@@ -153,6 +157,7 @@ echo "Downloading django-endless-pagination"
 cd opt/django-endless-pagination
 git fetch --all
 git reset --hard v1.1
+find . -type f -name "*.py" -print0 | xargs -0 sed -i 's/django\.utils\.importlib/importlib/g'
 python setup.py install
 cd "$REPO_DIR"
 
