@@ -1,68 +1,62 @@
-# security exceptions (necessary for PIP 1.5)
---allow-all-external
---allow-unverified PIL
---allow-unverified django-endless-pagination
---allow-unverified django-admin-tools
-
 # general python libraries
-distribute>=0.7.3
-args>=0.1.0,<0.2
-setproctitle>=1.1.8,<1.2
-pyinotify>=0.9.4,<1.0
-ipython>=1.1.0,<1.2
-pytz>=2013
-PIL>=1.1.7,<1.2
+distribute
+args
+setproctitle
+pyinotify
+ipython
+pytz
+PIL
 
 # html/xml parsing
-ua-parser>0.3.2,<0.4
-lxml>=3.3.0,<3.4
-BeautifulSoup>=3.1.2,<4.0
-html5lib>=0.95,<1.0
-slimit>=0.7.4,<0.8
-pyyaml>=3.10,<4.0
-pyquery>=1.2.8,<1.3
-requests>=2.3.0,<2.4
+ua-parser
+lxml
+BeautifulSoup
+html5lib
+slimit
+pyyaml
+pyquery
+requests
 
 # sphinx docs
-docutils>=0.10,<1.0
-sphinx>=1.2,<1.4
-sphinx_rtd_theme>=0.1.5,<1.2
-pygments>=1.4,<2.0
-sphinxcontrib-email>=0.1,<0.2
+docutils
+sphinx
+sphinx_rtd_theme
+pygments
+sphinxcontrib-email
 
 # memcached
-pylibmc>=1.2.3,<1.3
+pylibmc
 
 # postgresql
-psycopg2>=2.5.2
+psycopg2
 
 # celery
-pyrabbit>=1.0.0,<1.1
-celery>=3.1.9,<3.2
+pyrabbit
+celery
 
 # django
-django>=1.6.2,<1.7
-south>=0.8.4,<2.0
-gunicorn>=18.0,<19
-django-appconf>=0.6,<0.7
-django-compressor>=1.3,<1.4
-django-cacheback>=0.6,<0.7
-django-user-accounts==1.0b7
-django-admin-tools>=0.5.1,<0.6
-django-debug-toolbar>=1.0.1,<1.4
-django-debug-toolbar-template-timings>=0.5.5,<0.6
-django-dtpanel-htmltidy>=0.1.1,<0.2
-django-memcache-status>=1.1,<1.2
-django-cache-panel>=0.1,<0.2
-django-simple-captcha==0.4.5
-django-extensions>=1.3.3,<1.4
-django-storages>=1.1.8,<1.2
-django-forms-bootstrap>=2.0.3,<2.1
+django
+south
+gunicorn
+django-appconf
+django-compressor
+django-cacheback
+django-user-accounts
+django-admin-tools
+django-debug-toolbar
+django-debug-toolbar-template-timings
+django-dtpanel-htmltidy
+django-memcache-status
+django-cache-panel
+django-simple-captcha
+django-extensions
+django-storages
+django-forms-bootstrap
 
 # scientific computing (base libraries)
-cython>=0.19.2,<1.0
-numpy>=1.9.0,<1.10
-scipy>=0.13.2,<0.14
+cython
+numpy
+scipy
 
 # needed by matplotlib
-tornado<5.0
+tornado
